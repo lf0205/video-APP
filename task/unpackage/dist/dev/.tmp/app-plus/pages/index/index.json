@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "z-lists": "/pages/components/z-lists"
+  }
+}

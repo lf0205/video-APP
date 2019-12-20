@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"font-32.",[1],"data-v-e22efd3a { font-size: ",[0,32],"; }\n.",[1],"font-26.",[1],"data-v-e22efd3a { font-size: ",[0,26],"; }\n.",[1],"font-24.",[1],"data-v-e22efd3a { font-size: ",[0,24],"; }\n.",[1],"font-22.",[1],"data-v-e22efd3a { font-size: ",[0,22],"; }\n",],undefined,{path:"./pages/wallet/withdrawal_list.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/wallet/withdrawal_list.wxml') } }));

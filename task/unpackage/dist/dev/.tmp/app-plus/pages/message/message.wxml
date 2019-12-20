@@ -1,0 +1,1 @@
+<view class="data-v-59f0033e"><z-custom vue-id="1" isBack="{{true}}" class="data-v-59f0033e" bind:__l="__l" vue-slots="{{['backText']}}"><view slot="backText" class="data-v-59f0033e">消息中心</view></z-custom><message vue-id="2" name="user" class="data-v-59f0033e" bind:__l="__l"></message></view>

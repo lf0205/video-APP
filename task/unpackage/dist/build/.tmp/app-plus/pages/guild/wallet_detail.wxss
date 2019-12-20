@@ -1,0 +1,16 @@
+
+page.data-v-ed27de2a {
+    background-color: white;
+}
+.cu-list.menu>.cu-item.data-v-ed27de2a{
+    min-height: 10px;
+}
+.padding-d.data-v-ed27de2a{
+    padding: 8px;
+}
+.label-right.data-v-ed27de2a{
+    width: 500rpx;
+    color: #333333;
+    text-align: right;
+}
+

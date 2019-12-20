@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"close-modal.",[1],"data-v-7a4f7c66 { z-index: 999; }\n",],undefined,{path:"./pages/h5/browse.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/h5/browse.wxml') } }));

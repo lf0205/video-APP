@@ -1,0 +1,1 @@
+<view class="data-v-02a0a884"><z-custom vue-id="1" isBack="{{true}}" class="data-v-02a0a884" bind:__l="__l" vue-slots="{{['backText']}}"><view slot="backText" class="data-v-02a0a884">帮助中心</view></z-custom><message vue-id="2" name="{{name}}" data-ref="scroll" class="data-v-02a0a884 vue-ref" bind:__l="__l"></message></view>

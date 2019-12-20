@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"topbg.",[1],"data-v-36ac83fd { width: 100%; padding-bottom: 0 upx; }\n.",[1],"topbg .",[1],"vip-sel .",[1],"current-vip.",[1],"data-v-36ac83fd { border-radius: 0; padding: 20 upx 10 upx; top: 0; right: 0; }\n",],undefined,{path:"./pages/vip/vip.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/vip/vip.wxml') } }));

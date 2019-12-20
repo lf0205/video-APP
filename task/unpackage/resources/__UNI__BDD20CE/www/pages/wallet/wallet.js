@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-d03fa75e { background-color: white; }\n.",[1],"mark.",[1],"data-v-d03fa75e { color: #A8A8A8; font-size: ",[0,23],"; }\n",],undefined,{path:"./pages/wallet/wallet.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/wallet/wallet.wxml') } }));

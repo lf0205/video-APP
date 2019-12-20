@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-494aa9a2 { background-color: white; }\n.",[1],"mark.",[1],"data-v-494aa9a2 { color: #A8A8A8; }\n",],undefined,{path:"./pages/guild/wallet.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/guild/wallet.wxml') } }));

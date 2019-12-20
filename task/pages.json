@@ -1,0 +1,203 @@
+{
+  "pages": [
+    {
+      "path": "pages/home",
+      "style": {
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {}
+    },
+    {
+      "path": "pages/login/login",
+      "style": {}
+    },
+    {
+      "path": "pages/login/forgetpwd",
+      "style": {}
+    },
+    {
+      "path": "pages/login/register",
+      "style": {}
+    },
+    {
+      "path": "pages/user/user",
+      "style": {}
+    },
+    {
+      "path": "pages/create/cate",
+      "style": {}
+    },
+    {
+      "path": "pages/create/create",
+      "style": {}
+    },
+    {
+      "path": "pages/vip/vip",
+      "style": {
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/level/level",
+      "style": {
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/detail/detail",
+      "style": {}
+    },
+    {
+      "path": "pages/wallet/wallet",
+      "style": {}
+    },
+    {
+      "path": "pages/wallet/withdrawal",
+      "style": {}
+    },
+    {
+      "path": "pages/wallet/withdrawal_list",
+      "style": {}
+    },
+    {
+      "path": "pages/wallet/detail",
+      "style": {}
+    },
+    {
+      "path": "pages/order/all",
+      "style": {}
+    },
+    {
+      "path": "pages/order/detail",
+      "style": {}
+    },
+    {
+      "path": "pages/user/help",
+      "style": {}
+    },
+    {
+      "path": "pages/release/all",
+      "style": {}
+    },
+    {
+      "path": "pages/user/children",
+      "style": {}
+    },
+    {
+      "path": "pages/message/message",
+      "style": {}
+    },
+    {
+      "path": "pages/message/create",
+      "style": {}
+    },
+    {
+      "path": "pages/message/detail",
+      "style": {}
+    },
+    {
+      "path": "pages/user/set",
+      "style": {}
+    },
+    {
+      "path": "pages/user/info",
+      "style": {}
+    },
+    {
+      "path": "pages/user/about",
+      "style": {}
+    },
+    {
+      "path": "pages/user/edit_phone",
+      "style": {}
+    },
+    {
+      "path": "pages/user/edit_access",
+      "style": {}
+    },
+    {
+      "path": "pages/user/edit_account",
+      "style": {}
+    },
+    {
+      "path": "pages/user/edit_pwd",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/guild",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/home",
+      "style": {
+      }
+    },
+    {
+      "path": "pages/guild/join",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/create",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/wallet",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/withdrawal",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/withdrawal_list",
+      "style": {}
+    },
+    {
+      "path": "pages/guild/wallet_detail",
+      "style": {}
+    },
+    {
+      "path": "pages/user/invite",
+      "style": {}
+    },
+    {
+      "path": "pages/h5/h5",
+      "style": {}
+    },
+    {
+      "path": "pages/h5/browse",
+      "style": {}
+    },
+    {
+      "path": "pages/user/suggest",
+      "style": {}
+    },{
+      "path"  : "pages/user/privacy",
+      "style" : {}
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTitleText": "任务",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "condition": {
+    //模式配置，仅开发期间生效
+    "current": 0,
+    //当前激活的模式(list 的索引项)
+    "list": [
+      {
+        "name": "",
+        //模式名称
+        "path": "",
+        //启动页面，必选
+        "query": ""
+        //启动参数，在页面的onLoad函数里面得到
+      }
+    ]
+  }
+}

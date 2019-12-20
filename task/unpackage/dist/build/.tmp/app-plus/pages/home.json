@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "index": "/pages/index/index",
+    "cate": "/pages/create/cate",
+    "lists": "/pages/lists/lists",
+    "guild": "/pages/guild/guild",
+    "user": "/pages/user/user",
+    "mescroll-uni": "/pages/components/mescroll-uni/mescroll-uni"
+  }
+}

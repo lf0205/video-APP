@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "z-lists": "/pages/components/z-lists",
+    "z-swipe": "/pages/components/z-swipe"
+  },
+  "component": true
+}

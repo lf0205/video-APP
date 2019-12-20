@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "z-custom": "/pages/components/z-custom",
+    "z-order": "/pages/components/z-order",
+    "z-swipe": "/pages/components/z-swipe"
+  }
+}

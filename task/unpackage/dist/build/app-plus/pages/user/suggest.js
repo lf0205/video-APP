@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"contentData.",[1],"data-v-84f6b6e2 { min-height: ",[0,200],"; }\n",],undefined,{path:"./pages/user/suggest.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user/suggest.wxml') } }));

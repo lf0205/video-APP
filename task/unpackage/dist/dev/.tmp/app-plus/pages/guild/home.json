@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "index": "/pages/guild/index",
+    "set": "/pages/guild/set",
+    "audit": "/pages/guild/audit",
+    "users": "/pages/guild/users",
+    "mescroll-uni": "/pages/components/mescroll-uni/mescroll-uni"
+  }
+}

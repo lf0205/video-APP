@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/components/z-swipe"],{"32bb":function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var a=r(e("a34a"));function r(t){return t&&t.__esModule?t:{default:t}}function u(t,n,e,a,r,u,i){try{var c=t[u](i),o=c.value}catch(f){return void e(f)}c.done?n(o):Promise.resolve(o).then(a,r)}function i(t){return function(){var n=this,e=arguments;return new Promise(function(a,r){var i=t.apply(n,e);function c(t){u(i,a,r,c,o,"next",t)}function o(t){u(i,a,r,c,o,"throw",t)}c(void 0)})}}var c={props:{cate_name:{type:[String],default:null}},data:function(){return{cateSwipe:[]}},created:function(){this.loadData()},methods:{loadData:function(){var t=i(a.default.mark(function t(){var n=this;return a.default.wrap(function(t){while(1)switch(t.prev=t.next){case 0:return t.abrupt("return",this.$api.post("advert/slider",{cate_name:this.cate_name},function(t){n.cateSwipe=t.data}));case 1:case"end":return t.stop()}},t,this)}));function n(){return t.apply(this,arguments)}return n}()}};n.default=c},a496:function(t,n,e){"use strict";e.r(n);var a=e("fadf"),r=e("ca74");for(var u in r)"default"!==u&&function(t){e.d(n,t,function(){return r[t]})}(u);e("c541");var i=e("2877"),c=Object(i["a"])(r["default"],a["a"],a["b"],!1,null,"754b91e6",null);n["default"]=c.exports},b0f0:function(t,n,e){},c541:function(t,n,e){"use strict";var a=e("b0f0"),r=e.n(a);r.a},ca74:function(t,n,e){"use strict";e.r(n);var a=e("32bb"),r=e.n(a);for(var u in a)"default"!==u&&function(t){e.d(n,t,function(){return a[t]})}(u);n["default"]=r.a},fadf:function(t,n,e){"use strict";var a=function(){var t=this,n=t.$createElement;t._self._c},r=[];e.d(n,"a",function(){return a}),e.d(n,"b",function(){return r})}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/components/z-swipe-create-component',
+    {
+        'pages/components/z-swipe-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('6e42')['createComponent'](__webpack_require__("a496"))
+        })
+    },
+    [['pages/components/z-swipe-create-component']]
+]);                

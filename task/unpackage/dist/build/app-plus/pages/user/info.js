@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"avatar.",[1],"data-v-53268bad { width: ",[0,50],"; height: ",[0,50],"; }\n",],undefined,{path:"./pages/user/info.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user/info.wxml') } }));

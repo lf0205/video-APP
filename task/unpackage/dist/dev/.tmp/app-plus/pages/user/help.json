@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "z-custom": "/pages/components/z-custom",
+    "message": "/pages/components/z-message"
+  }
+}

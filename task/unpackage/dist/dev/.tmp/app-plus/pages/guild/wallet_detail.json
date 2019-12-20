@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "z-custom": "/pages/components/z-custom"
+  }
+}

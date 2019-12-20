@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"top-nav.",[1],"data-v-25412262 { z-index: 999; left: 0; top: 0; width: 100%; background-color: #ffffff; }\n",],undefined,{path:"./pages/order/all.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/order/all.wxml') } }));
