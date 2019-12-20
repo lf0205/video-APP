@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<!--  头部返回组件 -->
 		<view class="cu-custom" :style="[{height:CustomBar + 'px'}]">
 			<view class="cu-bar" :style="style" :class="[ bgImage != '' ? 'none-bg text-white bg-img':'', fixed ? 'fixed' : '', bgColor ]">
 				<view class="action" @tap="BackPage">

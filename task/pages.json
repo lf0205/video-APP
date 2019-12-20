@@ -176,7 +176,11 @@
     },{
       "path"  : "pages/user/privacy",
       "style" : {}
-    }
+    },
+	{
+		"path":"pages/video/video",
+		"style":{}
+	}
   ],
   "globalStyle": {
     "navigationBarTitleText": "任务",

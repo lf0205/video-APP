@@ -130,7 +130,7 @@
 				</view>
 				<view class="cu-list grid col-4 no-border">
 					<view class="cu-item" @click="jump">
-						<navigator url="/pages/message/message" hover-class="none">
+						<navigator url="/pages/video/video" hover-class="none">
 							<text class="cuIcon-messagefill"></text>
 							<text>链接</text>
 						</navigator>

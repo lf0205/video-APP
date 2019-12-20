@@ -38,16 +38,15 @@
                 {{v.title}}
             </view>
         </view>
-		<view class="loginTips">
+		<!-- <view class="loginTips">
 			<text>{{loginTitle}}</text>
-			<view class="">
+			<view class="loginInfo">
 				<text>{{loginInfo1}}</text>
 				<text>{{loginInfo2}}</text>
-				<text>{{loginInfo3}}</text>
-				<text>{{auther}}</text>
-				<button>{{buttonInfo}}{{loginTime}}</button>
+				<text>{{loginInfo3}},<text>{{auther}}</text></text>
 			</view>
-		</view>
+			<button>{{buttonInfo}}{{loginTime}}</button>
+		</view> -->
     </view>
 </template>
 
@@ -265,14 +264,24 @@
     uni-swiper .uni-swiper-wrapper, uni-swiper-item {
         overflow: auto;
     }
-	.loginTips{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		z-index: 999;
-		background: #FFFFFF;
-		width: 100%;
-		height:300rpx;
-	}
+	// .loginTips{
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%,-50%);
+	// 	z-index: 999;
+	// 	background: #FFFFFF;
+	// 	padding: 0 10%;
+	// 	width: 100%;
+	// 	height:500rpx;
+	// 	border-radius: 10rpx;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content:space-around;
+	// 	align-items: center;
+	// 	.loginInfo{
+	// 		display: flex;
+	// 		flex-direction: column;
+	// 	}
+	// }
 </style>
