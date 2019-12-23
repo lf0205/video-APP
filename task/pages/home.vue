@@ -99,24 +99,32 @@
                 more: false,
 				// 默认选中组件
                 pageCur: 'index',
-				loginTitle:"测试声明",
-				loginInfo1:"平台只能上传积极、好看、优质视频；分享客户喜欢的，才能吸引顾客找你。",
-				loginInfo2:"禁止过度营销，画质劣质，虚假宣传，色情暴力，诱导分享。",
-				loginInfo3:"视频质量差会被删除",
-				loginInfo:"多次违规账号会查封！",
-				auther:"测试视频法务部 宣",
-				buttonInfo:"我已阅读并承诺遵守",
-				loginTime:15
+				page:""
+				// loginTitle:"测试声明",
+				// loginInfo1:"平台只能上传积极、好看、优质视频；分享客户喜欢的，才能吸引顾客找你。",
+				// loginInfo2:"禁止过度营销，画质劣质，虚假宣传，色情暴力，诱导分享。",
+				// loginInfo3:"视频质量差会被删除",
+				// loginInfo:"多次违规账号会查封！",
+				// auther:"测试视频法务部 宣",
+				// buttonInfo:"我已阅读并承诺遵守",
+				// loginTime:15
             }
         },
 		// 项目启动时，执行操作
         onShow() {
-			
             if (this.$refs.userPage) {
                 this.$refs.userPage.initUser();
                 this.$refs.guildPage.initGuild();
             }
         },
+		onLoad(ops){
+			// 判断接收到的参数，因为参数刚开始都为undefined
+			// 所以默认赋值为index，就可以进行不同的操作了
+			if(ops.name === undefined ){
+				ops.name = 'index'
+			}
+			this.pageCur = ops.name
+		},
         methods: {
             async downCallback(scroll = null) {
                 await (() => {
@@ -220,7 +228,7 @@
         created() {
 			// 获取当前设备信息
             var sInfo = uni.getSystemInfoSync()
-			console.log('获取当前设备',sInfo);
+			// console.log('获取当前设备',sInfo);
             this.wh = sInfo.windowHeight
         },
         computed: {

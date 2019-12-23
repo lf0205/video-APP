@@ -24,25 +24,22 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-page.data-v-5828d7da {
+page.data-v-08aa8240 {
   background-color: white;
 }
-.cu-items.data-v-5828d7da {
+.cu-items.data-v-08aa8240 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
   height: 70px;
   background-color: #ffffff;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 

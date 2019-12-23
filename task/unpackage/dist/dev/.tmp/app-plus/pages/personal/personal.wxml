@@ -1,0 +1,1 @@
+<view class="videoBox data-v-23191788"><view class="videoHeader data-v-23191788"><image src="../../static/images/release/fanhui_icon.png" mode data-event-opts="{{[['tap',[['goBack']]]]}}" bindtap="__e" class="data-v-23191788"></image><text class="data-v-23191788">{{title}}</text></view></view>

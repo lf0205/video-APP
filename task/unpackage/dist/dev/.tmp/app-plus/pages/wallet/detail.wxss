@@ -1,14 +1,14 @@
 
-page.data-v-0fc33226 {
+page.data-v-5117a600 {
     background-color: white;
 }
-.cu-list.menu>.cu-item.data-v-0fc33226{
+.cu-list.menu>.cu-item.data-v-5117a600{
     min-height: 10px;
 }
-.padding-d.data-v-0fc33226{
+.padding-d.data-v-5117a600{
     padding: 8px;
 }
-.label-right.data-v-0fc33226{
+.label-right.data-v-5117a600{
     width: 500rpx;
     color: #333333;
     text-align: right;

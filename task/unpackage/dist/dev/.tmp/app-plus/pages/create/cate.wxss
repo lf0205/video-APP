@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.cu-list.grid.data-v-625e57c1 {
+.cu-list.grid.data-v-7bdc0bca {
   background-color: #f1f1f1;
 }
-.cate-logo.data-v-625e57c1 {
+.cate-logo.data-v-7bdc0bca {
   width: 100rpx;
   height: 100rpx;
   display: inline-table;

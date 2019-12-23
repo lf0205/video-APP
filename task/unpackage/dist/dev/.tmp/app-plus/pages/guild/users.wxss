@@ -24,9 +24,8 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.cu-list > .cu-item.data-v-fbef91aa {
+.cu-list > .cu-item.data-v-3c884cf6 {
   -webkit-transition: all .1s ease-in-out 0s;
-  -o-transition: all .1s ease-in-out 0s;
   transition: all .1s ease-in-out 0s;
 }
 

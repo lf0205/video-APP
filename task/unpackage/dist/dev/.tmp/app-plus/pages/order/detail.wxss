@@ -24,25 +24,25 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.status_1.data-v-6b49ef03, .status_3.data-v-6b49ef03 {
+.status_1.data-v-020a97e9, .status_3.data-v-020a97e9 {
   color: #ffe728;
 }
-.status_5.data-v-6b49ef03 {
+.status_5.data-v-020a97e9 {
   color: grey;
 }
-.status_7.data-v-6b49ef03 {
+.status_7.data-v-020a97e9 {
   color: red;
 }
-.status_9.data-v-6b49ef03 {
+.status_9.data-v-020a97e9 {
   color: #c4c4c4;
 }
-.introduction .cu-list.menu > .cu-item.data-v-6b49ef03 {
+.introduction .cu-list.menu > .cu-item.data-v-020a97e9 {
   min-height: 40rpx;
 }
-.introduction .cu-list.menu > .cu-item .content.data-v-6b49ef03, .introduction .cu-list.menu > .cu-item .action.data-v-6b49ef03 {
+.introduction .cu-list.menu > .cu-item .content.data-v-020a97e9, .introduction .cu-list.menu > .cu-item .action.data-v-020a97e9 {
   font-size: 28rpx;
 }
-.bar-w.data-v-6b49ef03 {
+.bar-w.data-v-020a97e9 {
   width: 80%;
 }
 

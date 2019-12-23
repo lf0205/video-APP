@@ -125,14 +125,20 @@
 			<view class='margin-top-xs'>
 				<view class="cu-bar bg-white">
 					<view class="action">
-						<text class=" text-bold text-black">链接</text>
+						<text class=" text-bold text-black">跳转</text>
 					</view>
 				</view>
 				<view class="cu-list grid col-4 no-border">
-					<view class="cu-item" @click="jump">
+					<view class="cu-item">
 						<navigator url="/pages/video/video" hover-class="none">
 							<text class="cuIcon-messagefill"></text>
-							<text>链接</text>
+							<text>发布</text>
+						</navigator>
+					</view>
+					<view class="cu-item">
+						<navigator url="/pages/personal/personal" hover-class="none">
+							<text class="cuIcon-messagefill"></text>
+							<text>个人中心</text>
 						</navigator>
 					</view>
 				</view>
@@ -166,9 +172,7 @@
                 this.vip_issue = config.vip['vip_'+this.userinfo.vip].issue;
                 this.level_name = config.level['level_'+this.userinfo.level].name;
             },
-			jump(){
-				this.$api.msg("该链接不存在")
-			}
+			
         }
     }
 </script>

@@ -24,16 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-page.data-v-7ee18c69 {
+page.data-v-15a2354f {
   background: #FFFFFF;
 }
-.cu-steps .cu-item.data-v-7ee18c69 {
+.cu-steps .cu-item.data-v-15a2354f {
   font-size: 20rpx;
 }
-.cu-steps .cu-item [class*="cuIcon-"].data-v-7ee18c69, .cu-steps .cu-item .num.data-v-7ee18c69 {
+.cu-steps .cu-item [class*="cuIcon-"].data-v-15a2354f, .cu-steps .cu-item .num.data-v-15a2354f {
   font-size: 30rpx;
 }
-.desc.data-v-7ee18c69 {
+.desc.data-v-15a2354f {
   min-height: 150rpx;
   border: 1px solid #eee;
   padding: 20rpx;

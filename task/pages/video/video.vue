@@ -1,34 +1,32 @@
 <template>
 	<view class="videoBox">
-		<!-- <z-custom class="videoHeader" :isBack='true'>
-		    <view slot='backText'>制作视频</view>
-		</z-custom> -->
-		<view class="videoHeader">
+		<!-- <view class="videoHeader">
 			<image @tap="goBack()" src="../../static/images/release/fanhui_icon.png" mode=""></image>
 			<text>{{title}}</text>
-		</view>
-		<!-- <uni-notice-bar background-color="rgb(58,58,68)" show-icon="true" :text="text"></uni-notice-bar> -->
-		<view class="">
-			
-		</view>
+		</view> -->
+		<z-custom :isBack='true'>
+			<view slot='backText'>{{title}}</view>
+		</z-custom>
+		
+		<uni-notice-bar speed=50 color="#fff" show-icon="true" background-color="rgb(58,58,68)" scrollable="true" single="true" :text="text"></uni-notice-bar>
+		
 		<form>
 			<view class="extract">
 				<text>{{extract}}</text>
-				<textarea value="" placeholder='提取方法:
-	1、去各大视频APP平台复制视频链接,
-	2、再粘贴到这里,点击"提取视频"即可。' />
+				<textarea placeholder="提取方法:1、去各大视频APP平台复制视频链接,2、再粘贴到这里,点击'提取视频'即可。"/>
 			</view>
-			<button form-type="submit">{{extract}}</button>
+			<button @click="submits()" form-type="submit">{{extract}}</button>
 			<view class="upload">
 				<text @tap="uploadVideo">{{uploadVideos}}</text>
 			</view>
 		</form>
+		
 		<view class="videoInfo">
 			<text>{{videoInfo1}}</text>
 			<text>{{videoInfo2}}</text>
 		</view>
 		<view class="videoJump">
-			<image src="../../static/images/release/wodezuopin.png" mode=""></image>
+			<image @tap="jump()" src="../../static/images/release/wodezuopin.png" mode=""></image>
 		</view>
 	</view>
 </template>
@@ -39,6 +37,7 @@
 	    components: {uniNoticeBar},
 		data() {
 			return {
+				values:"",
 				title:"制作视频",
 				text: "温馨提示： 只能上传积极、好看、优质视频；分享客户喜欢的，才能吸引客户找你。 视频质量差会被删除，多次违规账号会被查封！",
 				extract:"提取视频",
@@ -57,13 +56,35 @@
 						console.log(res);
 					}
 				});
+			},
+			goBack(){
+				history.back(-1)
+			},
+			jump(){
+				uni.navigateTo({
+					url:"../index/recommend"
+				})
+			},
+			submits(){
+				if(this.value == ""){
+					this.$api.msg("请先粘贴链接")
+				}
+				this.$api.msg("抓取视频链接错误")
 			}
+			
 		}
 	}
 </script>
 
 <style scoped lang="scss">
+	uni-page-body{
+		height: 100%;
+		background: rgb(21,23,35);
+	}
 	.videoBox{
+		background: rgb(21,23,35);
+		height: 100%!important;
+		width: 100%;
 		.videoHeader{
 			height: 100upx;
 			width: 100%;
@@ -83,9 +104,6 @@
 				color: #FFFFFF;
 			}
 		}
-		background: #000000;
-		height: 100%!important;
-		width: 100%;
 		form{
 			margin-bottom:100upx;
 			position: relative;
@@ -105,10 +123,7 @@
 					border-radius: 20upx;
 					background-color:rgb(58,58,68);
 					padding: 3%;
-				}
-				::placeholder{
-					line-height: 10upx;
-					color: red;
+					color: rgb(153,153,153);
 				}
 			}
 			button{
@@ -130,14 +145,17 @@
 			padding: 0 5%;
 			display: flex;
 			flex-direction: column;
+			text{
+				color: #fff;
+			}
 		}
 		.videoJump{
 			position: fixed;
 			right: 50upx;
 			bottom: 100upx;
 			image{
-				width: 100upx;
-				height: 100upx;
+				width: 110upx;
+				height: 110upx;
 			}
 		}
 	}

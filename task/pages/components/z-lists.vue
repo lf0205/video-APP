@@ -140,7 +140,7 @@
                 }
 
                 return this.$api.post('lists/index', {where: where, page: this.page, row_num: this.rowNum}, res => {
-					console.log("更新获取的数据",res);
+					// console.log("更新获取的数据",res);
 					// 判断成功后
                     if (res.code == 0) {
 						// 判断数据长度小于默认长度，设置完成

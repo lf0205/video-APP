@@ -42,7 +42,10 @@
     "pages/h5/h5",
     "pages/h5/browse",
     "pages/user/suggest",
-    "pages/user/privacy"
+    "pages/user/privacy",
+    "pages/video/video",
+    "pages/personal/personal",
+    "pages/recommend/recommend"
   ],
   "window": {
     "navigationBarTitleText": "任务",
@@ -51,14 +54,14 @@
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black"
   },
-  "nvueCompiler": "weex",
+  "nvueCompiler": "uni-app",
   "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
   "appname": "任务",
-  "compilerVersion": "2.3.7",
+  "compilerVersion": "2.4.6",
   "usingComponents": {
     "z-custom": "/pages/components/z-custom"
   }

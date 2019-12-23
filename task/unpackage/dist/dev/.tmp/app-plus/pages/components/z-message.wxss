@@ -24,21 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.article.data-v-0f0bed68 {
+.article.data-v-24e3279c {
   position: relative;
 }
-.article .del-msg.data-v-0f0bed68 {
+.article .del-msg.data-v-24e3279c {
     position: absolute;
     right: 35rpx;
     top: 75rpx;
 }
-.cu-card > .cu-item.data-v-0f0bed68 {
+.cu-card > .cu-item.data-v-24e3279c {
   margin-top: 10rpx;
 }
-.margin-m.data-v-0f0bed68 {
+.margin-m.data-v-24e3279c {
   margin-top: 10rpx;
 }
-.mark-time.data-v-0f0bed68 {
+.mark-time.data-v-24e3279c {
   color: #A8A8A8;
 }
 

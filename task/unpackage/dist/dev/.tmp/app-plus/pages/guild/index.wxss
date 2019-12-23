@@ -24,21 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-page.data-v-3c9e5cf5 {
+page.data-v-c75c0162 {
   background: #FFFFFF;
 }
-.message-data.data-v-3c9e5cf5 {
+.message-data.data-v-c75c0162 {
   margin-bottom: 100rpx;
   padding-top: 30rpx;
   background-color: #FbFbFb;
 }
-.btnFixed.data-v-3c9e5cf5 {
+.btnFixed.data-v-c75c0162 {
   position: fixed;
   bottom: 10%;
   right: 5%;
   z-index: 1000;
 }
-.btnFixed view.data-v-3c9e5cf5 {
+.btnFixed view.data-v-c75c0162 {
     background-color: #00C3C5;
     padding: 20rpx;
     border-radius: 50%;

@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-a40de32c { background-color: white; }\n",],undefined,{path:"./pages/message/detail.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-d199d460 { background-color: white; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/message/detail.wxss:27:1)",{path:"./pages/message/detail.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/message/detail.wxml') } }));

@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"cu-list.",[1],"grid.",[1],"data-v-625e57c1 { background-color: #f1f1f1; }\n.",[1],"cate-logo.",[1],"data-v-625e57c1 { width: ",[0,100],"; height: ",[0,100],"; display: inline-table; }\n",],undefined,{path:"./pages/create/cate.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"cu-list.",[1],"grid.",[1],"data-v-7bdc0bca { background-color: #f1f1f1; }\n.",[1],"cate-logo.",[1],"data-v-7bdc0bca { width: ",[0,100],"; height: ",[0,100],"; display: inline-table; }\n",],undefined,{path:"./pages/create/cate.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/create/cate.wxml') } }));

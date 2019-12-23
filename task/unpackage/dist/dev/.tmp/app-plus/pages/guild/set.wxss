@@ -24,14 +24,14 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-page.data-v-6aa3cf45 {
+page.data-v-489f7fc2 {
   background-color: white;
 }
-.avatar.data-v-6aa3cf45 {
+.avatar.data-v-489f7fc2 {
   width: 50rpx;
   height: 50rpx;
 }
-.mark.data-v-6aa3cf45 {
+.mark.data-v-489f7fc2 {
   color: #A8A8A8;
 }
 

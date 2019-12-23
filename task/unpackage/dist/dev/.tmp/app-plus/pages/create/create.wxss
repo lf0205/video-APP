@@ -24,23 +24,22 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.cu-modal.data-v-ad681f24 {
+.cu-modal.data-v-2abf3770 {
   background: none;
   padding-top: 100rpx;
   padding-bottom: 100rpx;
 }
-.cu-modal .cu-dialog.data-v-ad681f24 {
-    -webkit-box-shadow: 0rpx 0rpx 50rpx #333333;
-            box-shadow: 0rpx 0rpx 50rpx #333333;
+.cu-modal .cu-dialog.data-v-2abf3770 {
+    box-shadow: 0rpx 0rpx 50rpx #333333;
 }
-.create.data-v-ad681f24 {
+.create.data-v-2abf3770 {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 500rpx;
   padding-bottom: 50rpx;
   padding-top: 500rpx;
 }
-.create .form-data.data-v-ad681f24 {
+.create .form-data.data-v-2abf3770 {
     z-index: 9;
     width: 680rpx;
     padding: 35rpx;
@@ -49,23 +48,23 @@
     background-color: #FFFFFF;
     border-radius: 10rpx;
 }
-.create .form-data .contentData.data-v-ad681f24 {
+.create .form-data .contentData.data-v-2abf3770 {
       min-height: 200rpx;
 }
-.create .form-data .stepData.data-v-ad681f24 {
+.create .form-data .stepData.data-v-2abf3770 {
       min-height: 200rpx;
 }
-.create .form-data .form-content.data-v-ad681f24 {
+.create .form-data .form-content.data-v-2abf3770 {
       border: 1px solid #eee;
       position: relative;
 }
-.create .form-data .form-content .remaining.data-v-ad681f24 {
+.create .form-data .form-content .remaining.data-v-2abf3770 {
         color: #1CBBB4;
         position: absolute;
         right: 10rpx;
         bottom: 10rpx;
 }
-.create .form-data .form-content + .cu-form-group.data-v-ad681f24 {
+.create .form-data .form-content + .cu-form-group.data-v-2abf3770 {
         border-top: none;
 }
 

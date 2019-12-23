@@ -24,15 +24,22 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.index-content.data-v-f29001d8 {
+.index-content.data-v-3328bd24 {
   padding-bottom: 150rpx;
 }
-.card-swiper uni-swiper-item.data-v-f29001d8 {
+.card-swiper uni-swiper-item.data-v-3328bd24 {
   padding: 18px 0px 18px;
 }
-.menu-lists.data-v-f29001d8 {
+.menu-lists.data-v-3328bd24 {
   width: 100rpx;
   height: 100rpx;
   display: inline-table;
+}
+.recommend.data-v-3328bd24 {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
 }
 

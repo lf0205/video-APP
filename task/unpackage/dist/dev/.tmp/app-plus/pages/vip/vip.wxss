@@ -24,11 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.topbg.data-v-64a8f56a {
+.topbg.data-v-e8205678 {
   width: 100%;
   padding-bottom: 0rpx;
 }
-.topbg .vip-sel .current-vip.data-v-64a8f56a {
+.topbg .vip-sel .current-vip.data-v-e8205678 {
     border-radius: 0;
     padding: 20rpx 10rpx;
     top: 0;

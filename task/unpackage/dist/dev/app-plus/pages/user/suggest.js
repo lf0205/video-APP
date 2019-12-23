@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"contentData.",[1],"data-v-d329d1de { min-height: ",[0,200],"; }\n",],undefined,{path:"./pages/user/suggest.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"contentData.",[1],"data-v-2d2bbff7 { min-height: ",[0,200],"; }\n",],undefined,{path:"./pages/user/suggest.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user/suggest.wxml') } }));

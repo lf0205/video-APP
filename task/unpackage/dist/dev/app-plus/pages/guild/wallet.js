@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-7f4b0e34 { background-color: white; }\n.",[1],"mark.",[1],"data-v-7f4b0e34 { color: #A8A8A8; }\n",],undefined,{path:"./pages/guild/wallet.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-571b21cc { background-color: white; }\n.",[1],"mark.",[1],"data-v-571b21cc { color: #A8A8A8; }\n",],"Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./pages/guild/wallet.wxss:27:1)",{path:"./pages/guild/wallet.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/guild/wallet.wxml') } }));

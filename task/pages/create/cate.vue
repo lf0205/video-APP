@@ -20,14 +20,14 @@
 		},
 		created() {
 			const config = this.$api.getConfig('', this.$api.SYSTEM_CONFIG);
-			console.log("数据包",config);
+			// console.log("数据包",config);
             this.cates = config.cate_list || []
 			this.cates.shift()
         },
         computed: {
             topStyle() {
                 var StatusBar = this.StatusBar;
-				console.log(this.StatusBar);
+				// console.log(this.StatusBar);
                 return `padding-top:${StatusBar}px;`;
             },
         },

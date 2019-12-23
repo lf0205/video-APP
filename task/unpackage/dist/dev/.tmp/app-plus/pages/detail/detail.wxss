@@ -24,19 +24,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.lists .introduction .cu-list.menu > .cu-item.data-v-3041c6ce {
+.lists .introduction .cu-list.menu > .cu-item.data-v-71963aa8 {
   min-height: 40rpx;
 }
-.lists .introduction .cu-list.menu > .cu-item .content.data-v-3041c6ce, .lists .introduction .cu-list.menu > .cu-item .action.data-v-3041c6ce {
+.lists .introduction .cu-list.menu > .cu-item .content.data-v-71963aa8, .lists .introduction .cu-list.menu > .cu-item .action.data-v-71963aa8 {
   font-size: 28rpx;
 }
-.lists .bar-w.data-v-3041c6ce {
+.lists .bar-w.data-v-71963aa8 {
   width: 80%;
 }
-.lists .applyed.data-v-3041c6ce {
+.lists .applyed.data-v-71963aa8 {
   font-size: 20rpx;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 

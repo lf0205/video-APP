@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.user-content.data-v-fc4853e4 {
+.user-content.data-v-1a2f7230 {
   padding-bottom: 150rpx;
 }
-@-webkit-keyframes user-bg-data-v-fc4853e4 {
+@-webkit-keyframes user-bg-data-v-1a2f7230 {
 0% {
     background-position: 0 0;
 }
@@ -35,7 +35,7 @@
     background-position: 100% 0;
 }
 }
-@keyframes user-bg-data-v-fc4853e4 {
+@keyframes user-bg-data-v-1a2f7230 {
 0% {
     background-position: 0 0;
 }
@@ -43,42 +43,42 @@
     background-position: 100% 0;
 }
 }
-.user.data-v-fc4853e4 {
-  background: -o-linear-gradient(45deg, #d7d2cc 0%, #304352 100%);
+.user.data-v-1a2f7230 {
+  background: -webkit-linear-gradient(45deg, #d7d2cc 0%, #304352 100%);
   background: linear-gradient(45deg, #d7d2cc 0%, #304352 100%);
-  -webkit-animation: user-bg-data-v-fc4853e4 10s infinite linear alternate;
-          animation: user-bg-data-v-fc4853e4 10s infinite linear alternate;
+  -webkit-animation: user-bg-data-v-1a2f7230 10s infinite linear alternate;
+          animation: user-bg-data-v-1a2f7230 10s infinite linear alternate;
   background-size: 200% 100%;
   background-position: 0 0;
   width: 100%;
   height: 530rpx;
   color: #D2F7FE;
 }
-.user .user-bar.data-v-fc4853e4 {
+.user .user-bar.data-v-1a2f7230 {
     position: absolute;
     width: 100%;
     background: rgba(255, 255, 255, 0);
     color: #D2F7FE;
 }
-.user .info.data-v-fc4853e4 {
+.user .info.data-v-1a2f7230 {
     padding-top: 150rpx;
 }
-.user .info .avatar.data-v-fc4853e4 {
+.user .info .avatar.data-v-1a2f7230 {
       width: 150rpx;
       height: 150rpx;
 }
-.user .info .user-tag.data-v-fc4853e4 {
+.user .info .user-tag.data-v-1a2f7230 {
       border-radius: 30rpx;
       padding: 5rpx 15rpx;
 }
-.user .info .user-tag.data-v-fc4853e4::before {
+.user .info .user-tag.data-v-1a2f7230::before {
         margin-right: 8rpx;
 }
-.cu-list.grid > .cu-item text.data-v-fc4853e4 {
+.cu-list.grid > .cu-item text.data-v-1a2f7230 {
   color: #333333;
   font-size: 25rpx;
 }
-.handles .cu-list.grid > .cu-item text.data-v-fc4853e4:first-child {
+.handles .cu-list.grid > .cu-item text.data-v-1a2f7230:first-child {
   font-size: 35rpx;
 }
 

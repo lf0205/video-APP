@@ -24,16 +24,15 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.cu-item .tags .cu-tag.data-v-066ac5cc {
+.cu-item .tags .cu-tag.data-v-21468180 {
   padding: 20rpx;
 }
-.cu-item .applyed.data-v-066ac5cc {
+.cu-item .applyed.data-v-21468180 {
   font-size: 20rpx;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.load.data-v-066ac5cc {
+.load.data-v-21468180 {
   line-height: 3em;
 }
 

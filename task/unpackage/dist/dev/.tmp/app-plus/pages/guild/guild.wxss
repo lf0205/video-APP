@@ -24,16 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.guild.data-v-02d610d4 {
+.guild.data-v-5e4899f0 {
   widows: 100%;
   height: 100vh;
   background-color: #FFFFFF;
 }
-.guild .bg-img image.data-v-02d610d4 {
+.guild .bg-img image.data-v-5e4899f0 {
     width: 750rpx;
     height: 600rpx;
 }
-.guild .doIndex.data-v-02d610d4 {
+.guild .doIndex.data-v-5e4899f0 {
     position: fixed;
     width: 100%;
     color: white;

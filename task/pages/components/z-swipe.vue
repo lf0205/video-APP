@@ -28,7 +28,7 @@
                     cate_name : this.cate_name
                 } , (res=>{
                     this.cateSwipe = res.data
-					console.log(res.data)
+					// console.log(res.data)
                 }))
             },
         }

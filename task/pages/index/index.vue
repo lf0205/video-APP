@@ -29,10 +29,12 @@
 		<!-- 首页推荐栏 -->
 		<view class='solid-top'>
 			<view class="cu-bar bg-white">
-				<view class="action">
-					<text class="cuIcon-hotfill text-green"></text>
-					<text class="text-sm text-bold">推荐</text>
-				</view>
+				<navigator class="recommend" url="/pages/recommend/recommend">
+					<view class="action">
+						<text class="cuIcon-hotfill text-green"></text>
+						<text class="text-sm text-bold">推荐</text>
+					</view>	
+				</navigator>
 			</view>
 			<!-- 首页推荐列表 -->
 			<z-lists :hot="true" ref="scroll"></z-lists>
@@ -116,6 +118,11 @@
             scroll(){
                 return this.$refs.scroll.next();
             }
+			// jump(){
+			// 	uni.navigateTo({
+			// 		url:"./recommend/recommend"
+			// 	})
+			// }
 		}
 	};
 </script>
@@ -131,5 +138,10 @@
 		width: 100upx;
 		height: 100upx;
 		display: inline-table;
+	}
+	.recommend{
+		height: 100%;
+		width: 100%;
+		display: flex;
 	}
 </style>

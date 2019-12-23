@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.form-content.data-v-3d5a4995 {
+.form-content.data-v-269450fb {
   position: relative;
 }
-.form-content .remaining.data-v-3d5a4995 {
+.form-content .remaining.data-v-269450fb {
     color: #1CBBB4;
     position: absolute;
     right: 10rpx;
