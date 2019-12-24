@@ -5,7 +5,7 @@
 			<text>{{title}}</text>
 		</view> -->
 		<z-custom :isBack='true'>
-			<view slot='backText'>{{title}}</view>
+			<view slot='content'>{{title}}</view>
 		</z-custom>
 		
 		<uni-notice-bar speed=50 color="#fff" show-icon="true" background-color="rgb(58,58,68)" scrollable="true" single="true" :text="text"></uni-notice-bar>
@@ -13,7 +13,7 @@
 		<form>
 			<view class="extract">
 				<text>{{extract}}</text>
-				<textarea placeholder="提取方法:1、去各大视频APP平台复制视频链接,2、再粘贴到这里,点击'提取视频'即可。"/>
+				<textarea v-model="val" placeholder="提取方法:1、去各大视频APP平台复制视频链接,2、再粘贴到这里,点击'提取视频'即可。"/>
 			</view>
 			<button @click="submits()" form-type="submit">{{extract}}</button>
 			<view class="upload">
@@ -26,7 +26,9 @@
 			<text>{{videoInfo2}}</text>
 		</view>
 		<view class="videoJump">
-			<image @tap="jump()" src="../../static/images/release/wodezuopin.png" mode=""></image>
+			<navigator url="/pages/recommend/recommend">
+				<image src="../../static/images/release/wodezuopin.png" mode=""></image>
+			</navigator>
 		</view>
 	</view>
 </template>
@@ -37,7 +39,7 @@
 	    components: {uniNoticeBar},
 		data() {
 			return {
-				values:"",
+				val:"",
 				title:"制作视频",
 				text: "温馨提示： 只能上传积极、好看、优质视频；分享客户喜欢的，才能吸引客户找你。 视频质量差会被删除，多次违规账号会被查封！",
 				extract:"提取视频",
@@ -60,16 +62,13 @@
 			goBack(){
 				history.back(-1)
 			},
-			jump(){
-				uni.navigateTo({
-					url:"../index/recommend"
-				})
-			},
 			submits(){
-				if(this.value == ""){
+				if(this.val == ""){
 					this.$api.msg("请先粘贴链接")
+				}else{
+					console.log(this.val);
+					this.$api.msg("抓取视频链接错误")	
 				}
-				this.$api.msg("抓取视频链接错误")
 			}
 			
 		}
@@ -77,10 +76,6 @@
 </script>
 
 <style scoped lang="scss">
-	uni-page-body{
-		height: 100%;
-		background: rgb(21,23,35);
-	}
 	.videoBox{
 		background: rgb(21,23,35);
 		height: 100%!important;
@@ -153,9 +148,11 @@
 			position: fixed;
 			right: 50upx;
 			bottom: 100upx;
-			image{
-				width: 110upx;
-				height: 110upx;
+			navigator{
+				image{
+					width: 110upx;
+					height: 110upx;
+				}
 			}
 		}
 	}

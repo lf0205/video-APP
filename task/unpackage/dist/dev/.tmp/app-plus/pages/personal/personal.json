@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "z-custom": "/pages/components/z-custom",
     "uni-notice-bar": "/components/uni-notice-bar/uni-notice-bar"
   }
 }

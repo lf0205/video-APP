@@ -185,10 +185,16 @@
 		"path":"pages/personal/personal"
 	},
 	{	//首页推荐页
-	
         "path" : "pages/recommend/recommend",
         "style" : {}
-    }
+    },
+	{	
+		"path": "pages/css3/index",
+		"style": {
+			"navigationBarTitleText": "css3",
+			"navigationStyle":"custom"
+		}
+	}
     ],
   "globalStyle": {
     "navigationBarTitleText": "任务",

@@ -4559,6 +4559,9 @@ scroll-view.cu-steps .cu-item {
 .cuIcon-btn:before {
 	content: "\E601";
 }
+page{
+	height: 100%;
+}
 .no-b-r{
 	border-radius: 0;
 }

@@ -24,10 +24,6 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-uni-page-body.data-v-50c5bd00 {
-  height: 100%;
-  background: #151723;
-}
 .videoBox.data-v-50c5bd00 {
   background: #151723;
   height: 100% !important;
@@ -117,7 +113,7 @@ uni-page-body.data-v-50c5bd00 {
     right: 50rpx;
     bottom: 100rpx;
 }
-.videoBox .videoJump image.data-v-50c5bd00 {
+.videoBox .videoJump navigator image.data-v-50c5bd00 {
       width: 110rpx;
       height: 110rpx;
 }

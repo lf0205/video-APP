@@ -44,6 +44,9 @@
 	@import "static/colorui/main.css";
 	@import "static/colorui/icon.css";
 	
+	page{
+		height: 100%;
+	}
 	.no-b-r{
 		border-radius: 0;
 	}

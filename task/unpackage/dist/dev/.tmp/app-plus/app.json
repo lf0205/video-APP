@@ -45,7 +45,8 @@
     "pages/user/privacy",
     "pages/video/video",
     "pages/personal/personal",
-    "pages/recommend/recommend"
+    "pages/recommend/recommend",
+    "pages/css3/index"
   ],
   "window": {
     "navigationBarTitleText": "任务",
