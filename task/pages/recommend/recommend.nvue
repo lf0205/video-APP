@@ -1,171 +1,99 @@
 <template>
-	<!-- <view class="videoBox">
-		<view class="video">
-			<image src="../../static/images/recommend/bg.png" mode=""></image>
-		</view>
-		<view class="videoUserInfo">
-			<view class="videoUserImg">
-				<image class="userImg" src="../../static/images/recommend/touxiang.png"></image>
-				<view>
-					<image src="../../static/images/recommend/dianzan_icon_nor.png"></image>
-					<text>{{Fabulous}}</text>
+    <div class="page" :style="{ height: height }">
+		<view class="box">
+			<view class="cu-bar">
+				<image @click="goBack()" src="../../static/images/release/fanhui_icon.png" class="navBack"></image>
+				<view class="navTit content text-bold">
+					推荐
 				</view>
-				<view>
-					<image src="../../static/images/recommend/pinglun_icon.png"></image>
-					<text>{{info}}</text>
-				</view>
-				<view>
-					<image src="../../static/images/recommend/fenxiang_icon.png"></image>
-					<text>{{share}}</text>
-				</view>
-			</view>
-			<view class="videoUserContent">
-		
+				<image @click="search()" src="../../static/images/recommend/sousuo_icon.png" class="navSearch"></image>
 			</view>
 		</view>
-		<view class="cu-bar tabbar  shadow foot text-black">
-		    <view class="action" v-for="(v, i) in tabBar" :key="i" @tap="navChange(v.name)">
-		        <view :class="v.icon"></view>
-		        {{v.title}}
-		    </view>
-		</view>
-	</view> -->
-	<view class="page" :style="{ height: height }">
-		<z-custom :isBack='true'>
-			<view slot='content'>{{title}}</view>
-			<view slot='right'>
-				<image class="search" src="../../static/images/recommend/sousuo_icon.png"></image>
-			</view>
-		</z-custom>
-		<view class="swiperBox">
-			<swiper
-				class="swiper"
-				:vertical="true"
-				@change="changeCurrent"
-				:current="index">
-				<swiper-item v-for="(item, idx) in videoList" :key="idx" class="swiper-item">
-						<view v-if="Math.abs(index-idx)<=1" class="video-box">
-							<!-- 视频 -->
-							<chunlei-video controls class="video" :src="item.src"  :height="height" :width="width" :play="item.flag" v-if="Math.abs(index-idx)<=1" :gDuration="item.duration" :initialTime="item.initialTime" @pause="pauseVideo" :objectFit="item.objectFit"
-							>
-							</chunlei-video>
+		<swiper
+			class="swiper"
+			:vertical="true"
+			@change="changeCurrent"
+			:current="index">
+			<swiper-item v-for="(item, idx) in videoList" :key="idx" class="swiper-item">
+					
+					<div v-if="Math.abs(index-idx)<=1" class="video-box">
+						<chunlei-video class="video" :src="item.src"  :height="height" :width="width" 
+							:play="item.flag" v-if="Math.abs(index-idx)<=1" :gDuration="item.duration"
+							:initialTime="item.initialTime" @pause="pauseVideo" :objectFit="item.objectFit"
+						>
+						</chunlei-video>
+						
+						<cover-view class="cover-view-left">
+							<cover-view class="left-view">
+								<!-- #ifdef APP-PLUS-NVUE -->
+								<text class="left-text">@{{item.at}}</text>
+								<!-- #endif -->
+								<!-- #ifndef APP-PLUS-NVUE -->
+								<cover-view class="left-text">@{{item.at}}</cover-view>
+								<!-- #endif -->
+							</cover-view>
+							<cover-view class="left-view">
+								<!-- #ifdef APP-PLUS-NVUE -->
+								<text class="left-text">{{item.content}}</text>
+								<!-- #endif -->
+								<!-- #ifndef APP-PLUS-NVUE -->
+								<cover-view class="left-text">{{item.content}}</cover-view>
+								<!-- #endif -->
+							</cover-view>
+						</cover-view>
+						<cover-view class="cover-view-right">
+							<cover-image :src="item.avater" class="avater img" @click.stop="tapAvater"></cover-image>
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="right-text-avater">+</text>
+							<text class="right-text"></text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="right-text-avater">+</cover-view>
+							<cover-view class="right-text"></cover-view>
+							<!-- #endif -->
 							
-							<!-- 底部信息 -->
-							<view class="cover-view-left">
-								<view class="left-view">
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="left-text">@{{item.at}}</text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="left-text">@{{item.at}}</view>
-									<!-- #endif -->
-								</view>
-								<view class="left-view">
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="left-text">{{item.content}}</text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="left-text">{{item.content}}</view>
-									<!-- #endif -->
-								</view>
-							</view>
+							<cover-image :src="item.check?'../../static/aixinRed.png':'../../static/aixin.png'" class="img" @click.stop="tapLove"></cover-image>
 							
-							<!-- 右边图标信息 -->
-							<view class="cover-view-right">
-								<view class="auther" @tap="follow()">
-									<image :src="item.avater" class="avater img" @click.stop="tapAvater"></image>
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="right-text-avater">+</text>
-									<text class="right-text"></text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="right-text-avater">+</view>
-									<view class="right-text"></view>
-									<!-- #endif -->
-								</view>
-								<view class="aixinclick" @tap="spot()">
-									<image :src="item.check?'../../static/aixinRed.png':'../../static/aixin.png'" class="img" @click.stop="tapLove"></image>
-									
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="right-text">{{item.like}}</text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="right-text">{{item.like}}</view>
-									<!-- #endif -->
-								</view>
-								
-								<view class="info" @tap="info()">
-									<image src="../../static/xiaoxi.png" class="img" @click.stop="tapMsg"></image>
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="right-text">{{item.comment}}</text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="right-text">{{item.comment}}</view>
-									<!-- #endif -->
-								</view>
-								
-								<view class="share" @tap="share()">
-									<image src="../../static/share-fill.png" class="img" @click.stop="tapShare"></image>
-									
-									<!-- #ifdef APP-PLUS-NVUE -->
-									<text class="right-text">分享</text>
-									<!-- #endif -->
-									<!-- #ifndef APP-PLUS-NVUE -->
-									<view class="right-text">分享</view>
-									<!-- #endif -->
-								</view>
-							</view>
-						</view>
-				</swiper-item>
-			</swiper>
-		</view>
-	</view>
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="right-text">{{item.like}}</text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="right-text">{{item.like}}</cover-view>
+							<!-- #endif -->
+							
+							<cover-image src="../../static/xiaoxi.png" class="img" @click.stop="tapMsg"></cover-image>
+							
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="right-text">{{item.comment}}</text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="right-text">{{item.comment}}</cover-view>
+							<!-- #endif -->
+							
+							<cover-image src="../../static/share-fill.png" class="img" @click.stop="tapShare"></cover-image>
+							
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text class="right-text">分享</text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view class="right-text">分享</cover-view>
+							<!-- #endif -->
+							
+						</cover-view>
+					</div>
+			</swiper-item>
+		</swiper>
+    </div>
 </template>
-
 <script>
-	// export default {
-	// 	data() {
-	// 		return {
-	// 			title:"推荐",
-	// 			tabBar:[
-	// 				{
-	// 				    name: 'index',
-	// 				    title: '首页',
-	// 				    icon: 'cuIcon-home'
-	// 				},
-	// 				{
-	// 				    name: 'cate',
-	// 				    title: '发布',
-	// 				    icon: 'cuIcon-add'
-	// 				},
-	// 				{
-	// 				    name: 'user',
-	// 				    title: '我的',
-	// 				    icon: 'cuIcon-my'
-	// 				}
-	// 			],
-	// 			Fabulous:'0',
-	// 			info:'评论',
-	// 			share:"分享"
-	// 		}
-	// 	},
-	// 	methods:{
-	// 		navChange(url){
-	// 			console.log(url);
-	// 			uni.reLaunch({
-	// 				url:"../home?name="+url
-	// 			})
-	// 		}
-	// 	}
-	// }
 	import chunleiVideo from '../../components/chunlei-video/chunlei-video.vue'
-	export default { 
+    export default { 
 		components:{
 			chunleiVideo
 		},
-	    data() {
-	        return {
-				title:"推荐",
+        data() {
+            return {
+				title:'推荐',
 				sysheight:0,
 				videoList:[
 					{
@@ -211,7 +139,7 @@
 				width:'',
 				oldIndex:0
 			}
-	    },
+        },
 		created(){
 			//#ifdef APP-PLUS
 			plus.screen.lockOrientation("portrait-primary")
@@ -233,7 +161,7 @@
 				item.flag = false
 			}
 		},
-	    methods: {
+        methods: {
 			changeCurrent(e){
 				this.index = e.detail.current;
 				for (let item of this.videoList) {
@@ -309,57 +237,59 @@
 			clickVideo(){
 				this.videoList[this.index].flag = !this.videoList[this.index].flag
 			},
-			follow(){
-				console.log("关注")
+			search(){
+				uni.navigateTo({
+					url:"../search/search"
+				})
 			},
-			spot(){
-				console.log("点赞");
-			},
-			info(){
-				console.log("信息");
-			},
-			share(){
-				console.log("分享");
+			goBack(){
+				uni.navigateBack({
+					delta:1
+				})
 			}
-		},
+        },
 		watch:{
 			index(newVal,oldVal){
 				this.oldIndex = oldVal
 			}
 		}
-	}
+    }
 </script>
-
-<style scoped lang="scss">
-	.page{
-		position: relative;
+<style scoped>
+	.box{
+		background-color:#000000;
+		padding-bottom: 40upx;
 	}
-	z-custom{
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		height: 45upx;
+	.navBack{
+		position: absolute;
+		left: 44upx;
+		width: 20upx;
+		height: 36upx;
+		top: 50%;
+		margin-top: -18upx;
 	}
-	.search{
+	.navTit{
+		color: #FFFFFF;
+		font-size: 34upx;
+	}
+	.navSearch{
+		position: absolute;
+		right: 44upx;
 		width: 44upx;
 		height: 44upx;
-	}
-	.swiperBox{
-		// margin-top: 45upx;
-		flex: 1;
+		top: 50%;
+		margin-top: -22upx;
 	}
 	.swiper{
-		// flex: 1;
-		height: 100%;
+		flex: 1;  
 		background-color: #000;
 	}
 	.swiper-item {
 	    flex: 1;
 	}
-	.video {
+    .video {
 		flex: 1;
-	}
+    }
 	.video-box{
 		flex: 1;
 	}
@@ -434,13 +364,12 @@
 		left: 30upx;
 		top:-20upx;
 	}
-	.auther,.aixinclick,.info,.share{
-		margin-bottom: 40upx;
-	}
+	
 	.right-text{
 		text-align: center;
 		font-size: 14px;
 		color: #FFFFFF;
+		margin-bottom: 50upx;
 		height: 20px;
 	}
 	.img{
@@ -455,4 +384,5 @@
 		/* #endif */
 		flex: 1; 
 	}
+	
 </style>

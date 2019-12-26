@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "z-custom": "/pages/components/z-custom",
-    "chunlei-video": "/components/chunlei-video/chunlei-video"
-  }
-}

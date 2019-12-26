@@ -1,0 +1,8 @@
+
+.searchBox{
+	background: rgb(21,23,35);
+	height: 100%;
+	overflow: hidden;
+	padding-top: 40rpx;
+}
+

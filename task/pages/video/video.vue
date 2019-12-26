@@ -1,9 +1,5 @@
 <template>
 	<view class="videoBox">
-		<!-- <view class="videoHeader">
-			<image @tap="goBack()" src="../../static/images/release/fanhui_icon.png" mode=""></image>
-			<text>{{title}}</text>
-		</view> -->
 		<z-custom :isBack='true'>
 			<view slot='content'>{{title}}</view>
 		</z-custom>

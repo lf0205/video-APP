@@ -4,11 +4,11 @@
 			:style="{ height: height }" :loop="true" @waiting="waiting"
 			:enable-progress-gesture="false" :objectFit="objectFit"
 			:id="`video_${src}`" ref="`video_${src}`" class="video" @timeupdate="timeupdate">
-			<view class="top"></view>
-			<view class="bottom"></view>
+			<cover-view class="top"></cover-view>
+			<cover-view class="bottom"></cover-view>
 		</video>
 		
-		<view class="progressBar" :style="{ width: barWidth }"></view>
+		<cover-view class="progressBar" :style="{ width: barWidth }"></cover-view>
 	</view>
 </template>
 

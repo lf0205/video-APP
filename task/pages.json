@@ -184,6 +184,15 @@
 	{	//个人中心页
 		"path":"pages/personal/personal"
 	},
+	{	//个人中心作品页
+		"path":"pages/personal/works"
+	},
+	{	//个人中心动态页
+		"path":"pages/personal/dynamic"
+	},
+	{	//个人中心喜欢页
+		"path":"pages/personal/like"
+	},
 	{	//首页推荐页
         "path" : "pages/recommend/recommend",
         "style" : {}
@@ -195,6 +204,10 @@
 			"navigationStyle":"custom"
 		}
 	}
+        ,{
+            "path" : "pages/search/search",
+            "style" : {}
+        }
     ],
   "globalStyle": {
     "navigationBarTitleText": "任务",

@@ -45,8 +45,10 @@
     "pages/user/privacy",
     "pages/video/video",
     "pages/personal/personal",
-    "pages/recommend/recommend",
-    "pages/css3/index"
+    "pages/personal/works",
+    "pages/personal/dynamic",
+    "pages/personal/like",
+    "pages/search/search"
   ],
   "window": {
     "navigationBarTitleText": "任务",
@@ -54,6 +56,24 @@
     "navigationBarBackgroundColor": "#0081ff",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black"
+  },
+  "nvue": {
+    "pages": {
+      "pages/recommend/recommend.html": {
+        "window": {
+          "usingComponents": {}
+        },
+        "nvue": true
+      },
+      "pages/css3/index.html": {
+        "window": {
+          "usingComponents": {},
+          "navigationBarTitleText": "css3",
+          "navigationStyle": "custom"
+        },
+        "nvue": true
+      }
+    }
   },
   "nvueCompiler": "uni-app",
   "renderer": "auto",
