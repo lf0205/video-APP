@@ -1,39 +1,59 @@
-<template>
-	<view class="searchBox">
-		<zy-search :is-focus="false" :theme="themeClass" :show-want="true" :speechEngine="speechEngine"
-		:hot-list="hotList" @getSearchText="getSearchText"></zy-search>
+<template name="zy-search">
+	<view class="searchs">
+		<inputSearch :dataSource="dataSource" @select="handleChange" placeholder="请输入商品名称" />
 	</view>
+	
 </template>
 
 <script>
-	import zySearch from '../../components/zy-search/zy-search.vue'
-	export default {
-		components: {
-			zySearch
+	import inputSearch from "../../components/p-inputSearch/inputSearch.vue"
+	export default{
+		components:{
+			inputSearch
 		},
 		data() {
 			return {
-				themeClass: 'block',
-				speechEngine: 'baidu', //语音识别引擎
-				hotList: ['栏目1','栏目2','栏目3','栏目4']	//初始化推荐列表
-			}
+				dataSource: [{
+						id: 1,
+						name: '请叫我女神',
+						titImg:'../../static/images/search/touxiang.png',
+						userInfo:"二火锅我不想去吃并不咋的，我来告哈黑娃老火锅",
+						imgUrl:"../../static/images/search/phonto.png",
+						like:'666',
+						likeImg:'../../static/images/search/dianzan_icon.png',
+						comment:'评论',
+						commentImg:"../../static/images/search/pinglun_icon.png",
+						share:'分享',
+						shareImg:"../../static/images/search/fenxiang_icon.png"
+					},
+					{
+						id: 2,
+						name: '偶买噶',
+						titImg:'../../static/images/search/touxiang.png',
+						userInfo:"二火锅我不想去吃并不咋的，我来告哈偶买噶老火锅",
+						imgUrl:"../../static/images/search/phonto.png",
+						like:'666',
+						likeImg:'../../static/images/search/dianzan_icon.png',
+						comment:'评论',
+						commentImg:"../../static/images/search/pinglun_icon.png",
+						share:'分享',
+						shareImg:"../../static/images/search/fenxiang_icon.png"
+					}
+				],
+			};
 		},
 		methods: {
-			getSearchText(e) {
-				uni.showToast({
-					title:'回调的搜索信息: ' + e,
-					icon:"none"
-				})
+			handleChange(data) {
+				console.log(data)
 			}
-		},
+		}
 	}
 </script>
 
-<style>
-	.searchBox{
-		background: rgb(21,23,35);
+<style lang="less" scoped>
+	.searchs{
 		height: 100%;
-		overflow: hidden;
-		padding-top: 40upx;
+		width: 100%;
+		background: #151723;
 	}
 </style>

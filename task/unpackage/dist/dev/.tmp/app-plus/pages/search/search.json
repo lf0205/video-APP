@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "zy-search": "/components/zy-search/zy-search"
+    "input-search": "/components/p-inputSearch/inputSearch"
   }
 }

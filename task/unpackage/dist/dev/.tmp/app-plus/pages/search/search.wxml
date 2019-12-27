@@ -1,1 +1,1 @@
-<view class="searchBox"><zy-search vue-id="1" is-focus="{{false}}" theme="{{themeClass}}" show-want="{{true}}" speechEngine="{{speechEngine}}" hot-list="{{hotList}}" data-event-opts="{{[['^getSearchText',[['getSearchText']]]]}}" bind:getSearchText="__e" bind:__l="__l"></zy-search></view>
+<view class="searchs data-v-44e26a70"><input-search vue-id="1" dataSource="{{dataSource}}" placeholder="请输入商品名称" data-event-opts="{{[['^select',[['handleChange']]]]}}" bind:select="__e" class="data-v-44e26a70" bind:__l="__l"></input-search></view>
