@@ -204,10 +204,13 @@
 			"navigationStyle":"custom"
 		}
 	}
-        ,{
-            "path" : "pages/search/search",
-            "style" : {}
-        }
+	,{
+		"path" : "pages/search/search",
+		"style" : {}
+	},
+	{
+		"path":"pages/recommend/userPage"
+	}
     ],
   "globalStyle": {
     "navigationBarTitleText": "任务",

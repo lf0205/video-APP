@@ -2,10 +2,10 @@
 	<view class="input-group">
 		<view class="box">
 			<view class="input-search">
-				<image class="input-logo" src="../../static/images/recommend/sousuo_icon.png" mode=""></image>
+				<image class="input-logo" src="../../static/images/recommend/sousuo_icon.png"></image>
 				<input :placeholder="placeholder" @input="search"  v-model="name" />
 				<!-- @blur="hideList()" -->
-				<image @click="delhistory()" class="input-clear" src="../../static/images/search/shanchu_icon.png" mode=""></image>
+				<image @click="delhistory()" class="input-clear" src="../../static/images/search/shanchu_icon.png"></image>
 			</view>
 			<text @click="goBack()" class='cancel'>取消</text>
 		</view>
@@ -18,18 +18,18 @@
 					<text>{{item.name}}</text>
 				</view>
 				<text class="li-info">{{item.userInfo}}</text>
-				<image class="li-Img" :src="item.imgUrl" mode=""></image>
+				<image class="li-Img" :src="item.imgUrl"></image>
 				<view class="li-datas">
-					<view>
-						<image :src="item.likeImg" mode=""></image>
+					<view @tap="like">
+						<image class="islike" :src="item.likeImg"></image>
 						<text>{{item.like}}</text>
 					</view>
 					<view>
-						<image :src="item.commentImg" mode=""></image>
+						<image :src="item.commentImg"></image>
 						<text>{{item.comment}}</text>
 					</view>
-					<view>
-						<image :src="item.shareImg" mode=""></image>
+					<view @tap="share">
+						<image :src="item.shareImg"></image>
 						<text>{{item.share}}</text>
 					</view>
 				</view>
@@ -52,9 +52,37 @@
 		},
 		data() {
 			return {
-				list: [],//循环数据
+				list: [
+						{
+							id: 1,
+							name: '请叫我女神1',
+							titImg:'../../static/images/search/touxiang.png',
+							userInfo:"二火锅我不想去吃并不咋的，我来告哈黑娃老火锅",
+							imgUrl:"../../static/images/search/phonto.png",
+							like:'666',
+							likeImg:'../../static/images/search/dianzan_icon.png',
+							comment:'评论',
+							commentImg:"../../static/images/search/pinglun_icon.png",
+							share:'分享',
+							shareImg:"../../static/images/search/fenxiang_icon.png"
+						},
+						{
+							id: 2,
+							name: '偶买噶2',
+							titImg:'../../static/images/search/touxiang.png',
+							userInfo:"二火锅我不想去吃并不咋的，我来告哈偶买噶老火锅",
+							imgUrl:"../../static/images/search/phonto.png",
+							like:'666',
+							likeImg:'../../static/images/search/dianzan_icon.png',
+							comment:'评论',
+							commentImg:"../../static/images/search/pinglun_icon.png",
+							share:'分享',
+							shareImg:"../../static/images/search/fenxiang_icon.png"
+						}
+					],//循环数据
 				name: '',//用户输入值
-				backName: ''
+				backName: '',
+				isLike:[]
 			};
 		},
 		destroyed() {
@@ -73,11 +101,12 @@
 						arr.push(dataSource[i]);
 					}
 				}
-				console.log(arr)
 				if (!val) {
 					this.list = [];
 				} else {
 					this.list = arr;
+					// this.isLike.push(arr.islike)
+					// console.log(arr.islike)
 				}
 
 			},
@@ -94,11 +123,30 @@
 				}, 0);
 			},
 			delhistory () {		//清空搜索信息
-				this.searchText = ''
+				this.name = ''
 			},
 			goBack(){
-				uni.navigateBack({
-					delta: 1
+				// uni.navigateBack({
+				// 	delta: 1
+				// });
+				history.back(-1)
+			},
+			like(){
+				this.isLike == !this.isLike
+				console.log(this.isLike);
+			},
+			share(){
+				uni.share({
+					provider: "weixin",
+					scene: "WXSceneSession",
+					type: 1,
+					summary: "我正在使用HBuilderX开发uni-app，赶紧跟我一起来体验！",
+					success: function (res) {
+						console.log("success:" + JSON.stringify(res));
+					},
+					fail: function (err) {
+						console.log("fail:" + JSON.stringify(err));
+					}
 				});
 			}
 		}
@@ -204,6 +252,14 @@
 						text{
 							font-size: 24upx;
 							color: rgb(255,255,255);
+						}
+						.islike{
+							// background: pink;
+							color: pink;
+						}
+						.noLike{
+							background: #FFFFFF;
+							color: #FFFFFF;
 						}
 					}
 				}

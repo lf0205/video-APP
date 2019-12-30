@@ -22,7 +22,7 @@
 							:initialTime="item.initialTime" @pause="pauseVideo" :objectFit="item.objectFit"
 						>
 						</chunlei-video>
-						
+						<!-- 视频底部信息 -->
 						<cover-view class="cover-view-left">
 							<cover-view class="left-view">
 								<!-- #ifdef APP-PLUS-NVUE -->
@@ -41,8 +41,9 @@
 								<!-- #endif -->
 							</cover-view>
 						</cover-view>
+						<!-- 视频右边用户信息 -->
 						<cover-view class="cover-view-right">
-							<cover-image :src="item.avater" class="avater img" @click.stop="tapAvater"></cover-image>
+							<cover-image :src="item.avater" class="avater bannerImg" @click.stop="tapAvater"></cover-image>
 							<!-- #ifdef APP-PLUS-NVUE -->
 							<text class="right-text-avater">+</text>
 							<text class="right-text"></text>
@@ -206,18 +207,30 @@
 				
 			},
 			tapAvater(){
+				// 头像
 				uni.showToast({
 					icon:'none',
 					title:`点击索引为${this.index}的头像`
 				})
+				// console.log("获取当前用户下标",this.index);
+				// console.log("获取到当前用户的信息",this.videoList[this.index]);
+				// console.log("获取到当前用户的信息",JSON.stringify(this.videoList[this.index]));
+				// JSON.stringify(object)
+				let datas = JSON.stringify(this.videoList[this.index])
+				console.log(datas);
+				uni.navigateTo({
+					url:"userPage?data="+datas
+				})
 			},
 			tapMsg(){
+				// 评论
 				uni.showToast({
 					icon:'none',
 					title:`查看索引为${this.index}的评论`
 				})
 			},
 			tapShare(){
+				// 分享
 				uni.showToast({
 					icon:'none',
 					title:`分享索引为${this.index}的视频`
@@ -334,6 +347,7 @@
 		right: 20upx;
 		/* #ifndef APP-PLUS-NVUE */
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		/* #endif */
 		z-index: 9999;
@@ -342,8 +356,8 @@
 	.right-text-avater{
 		position: absolute;
 		font-size: 14px;
-		top: 80upx;
-		left: 30upx;
+		top: 82upx;
+		left: 32upx;
 		height: 40upx;
 		width: 40upx;
 		background-color: #DD524D;
@@ -372,9 +386,14 @@
 		margin-bottom: 50upx;
 		height: 20px;
 	}
-	.img{
+	.bannerImg{
 		height: 100upx;
 		width: 100upx;
+		opacity: 0.9;
+	}
+	.img{
+		height: 60upx;
+		width: 60upx;
 		opacity: 0.9;
 	}
 	.page{
