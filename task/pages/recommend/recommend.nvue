@@ -212,14 +212,12 @@
 					icon:'none',
 					title:`点击索引为${this.index}的头像`
 				})
-				// console.log("获取当前用户下标",this.index);
-				// console.log("获取到当前用户的信息",this.videoList[this.index]);
-				// console.log("获取到当前用户的信息",JSON.stringify(this.videoList[this.index]));
-				// JSON.stringify(object)
-				let datas = JSON.stringify(this.videoList[this.index])
+				console.log("获取到当前用户的信息",this.videoList[this.index]);
+				console.log("编码后的数据",JSON.stringify(this.videoList[this.index]));
+				var datas = JSON.stringify(this.videoList[this.index])
 				console.log(datas);
 				uni.navigateTo({
-					url:"userPage?data="+datas
+					url:"userPage?data="+datas+"?id="+this.index
 				})
 			},
 			tapMsg(){

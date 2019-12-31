@@ -1,12 +1,13 @@
 <template>
-	<view class="">
+	<view class="userPageBox">
+		<z-custom :isBack='true'>
+		    <image class="headerShare" slot='right' src="../../static/images/recommend/fenxiang_icon.png"></image>
+		</z-custom>
 		<view class="personalBox">
-			<text class="myTitle">{{title}}</text>
 			<view class="myInfo">
-				<image :src="userInfo.avater" mode=""></image>
+				<image :src="userInfo.avater"></image>
 				<text class="myName">@{{userInfo.at}}</text>
-				<!-- <text class="myId">ID号: {{userInfo.phone}}</text> -->
-				<view class="myData">
+				<view class="myData" ref="btn">
 					<view>
 						<text>{{userInfo.like}}</text>
 						<text class="myDataTitle">获赞</text>
@@ -31,7 +32,7 @@
 					</view>
 				</scroll-view>
 				<!-- 导航栏信息 -->
-				<!-- <view v-for="(item,index) in datas" :key="index" v-if="index==TabCur" class="navInfo">
+				<view v-for="(item,index) in datas" :key="index" v-if="index==TabCur" class="navInfo">
 					<view v-if="item == '作品' ">
 						<works></works>
 					</view>
@@ -41,7 +42,7 @@
 					<view v-else>
 						<like></like>
 					</view>
-				</view> -->
+				</view>
 			</view>
 		</view>
 	</view>
@@ -49,24 +50,31 @@
 
 <script>
 	import uniNoticeBar from '@/components/uni-notice-bar/uni-notice-bar.vue'
-	// import works from './works'
-	// import dynamic from './dynamic'
-	// import like from './like'
+	import works from './works'
+	import dynamic from './dynamic'
+	import like from './like'
 	export default {
 		data() {
 			return {
-				title:"个人中心",
 				userInfo:{},
 				Fabulous:0,
 				follow:0,
 				Fans:0,
 				datas:["作品","动态","喜欢"],
-				TabCur: 0
+				TabCur: 0,
+				scrollTo:-36
 			}
 		},
 		onLoad(option) {
-			console.log(option.data);
-			// const item = JSON.parse(decodeURIComponent(option.data));
+			console.log(option);
+			console.log(option.id);
+			if(option.id === 0){
+				console.log(1);
+			}else{
+				console.log(2);
+			}
+			// console.log(option.data);
+			// var item = JSON.parse(decodeURIComponent(option.data));
 			// console.log(item);
 			// this.userInfo = item
 			// console.log(this.userInfo);
@@ -74,27 +82,45 @@
 		methods:{
 			tabSelect(e) {
 				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
 			}
 		},
 		components: {
 			uniNoticeBar,
-			// works,
-			// dynamic,
-			// like
+			works,
+			dynamic,
+			like
+		},
+		mounted() {
+			console.log(this.$refs.btn.$el.getBoundingClientRect())
+			// if(this.$refs.btn.$el.getBoundingClientRect() <= this.scrollTo){
+				// console.log(1);
+			// }else{
+				// console.log(2);
+			// }
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	.personalBox{
+	.userPageBox{
 		overflow: hidden;
+	}
+	z-custom{
+		
+	}
+	.headerShare{
+		width: 40upx;
+		height: 40upx;
+		background: #000000;
+	}
+	.personalBox{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
 		background: rgb(21,23,35);
-		padding-top: 68upx;
+		padding-top: 168upx;
 		.myTitle{
 			color: rgb(255,255,255);
 			font-size: 34px;
@@ -122,10 +148,6 @@
 				margin-top: 80upx;
 				color: rgb(255,255,255);
 				font-size: 40upx;
-			}
-			.myId{
-				color: rgb(255,255,255);
-				font-size: 30upx;
 			}
 			.myData{
 				width: 100%;
@@ -156,18 +178,16 @@
 		.myDatas{
 			border-top: 1px solid rgb(43,45,57);
 			flex: 1;
-			overflow-y: auto;
 			width: 100%;
 			margin-top: 22upx;
 			position: relative;
 			.nav{
 				height: 90upx;
-				position: fixed;
 				background: rgb(21,23,35);
 				z-index: 999;
 			}
 			.navInfo{
-				margin-top: 90upx;
+				
 			}
 		}
 	}

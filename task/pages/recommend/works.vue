@@ -26,6 +26,17 @@
 					{url:"../../static/images/main/photo_03.png",Num:0},
 					{url:"../../static/images/main/photo_04.png",Num:0},
 					{url:"../../static/images/main/photo_05.png",Num:0},
+					{url:"../../static/images/main/photo_01.png",Num:0},
+					{url:"../../static/images/main/photo_02.png",Num:0},
+					{url:"../../static/images/main/photo_03.png",Num:0},
+					{url:"../../static/images/main/photo_04.png",Num:0},
+					{url:"../../static/images/main/photo_05.png",Num:0},
+					{url:"../../static/images/main/photo_06.png",Num:0},
+					{url:"../../static/images/main/photo_01.png",Num:0},
+					{url:"../../static/images/main/photo_02.png",Num:0},
+					{url:"../../static/images/main/photo_03.png",Num:0},
+					{url:"../../static/images/main/photo_04.png",Num:0},
+					{url:"../../static/images/main/photo_05.png",Num:0},
 					{url:"../../static/images/main/photo_06.png",Num:0}
 				]
 			}

@@ -208,8 +208,17 @@
 		"path" : "pages/search/search",
 		"style" : {}
 	},
-	{
+	{	//视频用户页面
 		"path":"pages/recommend/userPage"
+	},
+	{//视频用户喜欢页面
+		"path":"pages/recommend/like"
+	},
+	{//视频用户作品页面
+		"path":"pages/recommend/works"
+	},
+	{//视频用户动态页面
+		"path":"pages/recommend/dynamic"
 	}
     ],
   "globalStyle": {
