@@ -43,9 +43,11 @@
 <style>
 	@import "static/colorui/main.css";
 	@import "static/colorui/icon.css";
+	@import url("http://at.alicdn.com/t/font_1593747_s5cthqtfgbq.css");
 	
 	page{
 		height: 100%;
+		background-color:#151723;
 	}
 	.no-b-r{
 		border-radius: 0;

@@ -7,6 +7,7 @@
 				<text>{{item.Num}}</text>
 			</view>
 		</view>
+		<view v-if='data.length > 0' class="likeFooter">没有更多数据</view>
 	</view>
 </template>
 
@@ -52,6 +53,12 @@
 					margin-right: 10upx;
 				}
 			}
+		}
+		.likeFooter{
+			width: 100%;
+			text-align: center;
+			margin: 20upx 0;
+			color: #FFFFFF;
 		}
 	}
 </style>

@@ -219,6 +219,9 @@
 	},
 	{//视频用户动态页面
 		"path":"pages/recommend/dynamic"
+	},
+	{//视频打赏页面
+		"path":"pages/recommend/award"
 	}
     ],
   "globalStyle": {

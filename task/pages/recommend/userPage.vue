@@ -1,7 +1,8 @@
 <template>
 	<view class="userPageBox">
 		<z-custom :isBack='true'>
-		    <image class="headerShare" slot='right' src="../../static/images/recommend/fenxiang_icon.png"></image>
+		    <!-- <image class="headerShare" slot='right' src="../../static/images/recommend/fenxiang_icon.png"></image> -->
+			<view slot='right' class="headerShare iconfont icon-fenxiang"></view>
 		</z-custom>
 		<view class="personalBox">
 			<view class="myInfo">
@@ -56,6 +57,7 @@
 	export default {
 		data() {
 			return {
+				id:null,
 				userInfo:{},
 				Fabulous:0,
 				follow:0,
@@ -66,18 +68,10 @@
 			}
 		},
 		onLoad(option) {
-			console.log(option);
-			console.log(option.id);
-			if(option.id === 0){
-				console.log(1);
-			}else{
-				console.log(2);
-			}
-			// console.log(option.data);
-			// var item = JSON.parse(decodeURIComponent(option.data));
-			// console.log(item);
-			// this.userInfo = item
-			// console.log(this.userInfo);
+			// 解码传过来的对象数据
+			var item = JSON.parse(decodeURIComponent(JSON.stringify(option)))
+			this.userInfo = JSON.parse(item.data)
+			this.id = item.id
 		},
 		methods:{
 			tabSelect(e) {
@@ -92,12 +86,7 @@
 			like
 		},
 		mounted() {
-			console.log(this.$refs.btn.$el.getBoundingClientRect())
-			// if(this.$refs.btn.$el.getBoundingClientRect() <= this.scrollTo){
-				// console.log(1);
-			// }else{
-				// console.log(2);
-			// }
+			// console.log(this.$refs.btn.$el.getBoundingClientRect())
 		}
 	}
 </script>
@@ -110,9 +99,7 @@
 		
 	}
 	.headerShare{
-		width: 40upx;
-		height: 40upx;
-		background: #000000;
+		font-size: 48upx;
 	}
 	.personalBox{
 		display: flex;

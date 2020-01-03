@@ -71,6 +71,13 @@
 							<cover-view class="right-text">{{item.comment}}</cover-view>
 							<!-- #endif -->
 							
+							<!-- #ifdef APP-PLUS-NVUE -->
+							<text @tap="award()" class="award right-text iconfont icon-shang2-copy"></text>
+							<!-- #endif -->
+							<!-- #ifndef APP-PLUS-NVUE -->
+							<cover-view @tap="award()" class="award right-text iconfont icon-shang2-copy"></cover-view>
+							<!-- #endif -->
+							
 							<cover-image src="../../static/share-fill.png" class="img" @click.stop="tapShare"></cover-image>
 							
 							<!-- #ifdef APP-PLUS-NVUE -->
@@ -204,31 +211,33 @@
 			tapLove(){
 				this.videoList[this.index].check = !this.videoList[this.index].check
 				this.videoList = [...this.videoList]
+				console.log(this.videoList[this.index].check);
+				if(this.videoList[this.index].check){
+					console.log(1);
+					console.log(this.videoList[this.index]);
+				}else{
+					console.log(2);
+				}
 				
 			},
 			tapAvater(){
-				// 头像
-				uni.showToast({
-					icon:'none',
-					title:`点击索引为${this.index}的头像`
-				})
-				console.log("获取到当前用户的信息",this.videoList[this.index]);
-				console.log("编码后的数据",JSON.stringify(this.videoList[this.index]));
-				var datas = JSON.stringify(this.videoList[this.index])
+				var datas = encodeURIComponent(JSON.stringify(this.videoList[this.index]));
 				console.log(datas);
 				uni.navigateTo({
-					url:"userPage?data="+datas+"?id="+this.index
+					url:`userPage?data=${datas}&id=${this.index}`
 				})
 			},
 			tapMsg(){
-				// 评论
 				uni.showToast({
 					icon:'none',
 					title:`查看索引为${this.index}的评论`
 				})
+				// uni.navigateTo({
+				// 	// url:`userPage?data=${datas}&id=${this.index}`
+				// 	url:``
+				// })
 			},
 			tapShare(){
-				// 分享
 				uni.showToast({
 					icon:'none',
 					title:`分享索引为${this.index}的视频`
@@ -256,6 +265,12 @@
 			goBack(){
 				uni.navigateBack({
 					delta:1
+				})
+			},
+			award(){
+				var datas = encodeURIComponent(JSON.stringify(this.videoList[this.index]));
+				uni.navigateTo({
+					url:`award?data=${datas}&id=${this.index}`
 				})
 			}
         },
@@ -382,7 +397,10 @@
 		font-size: 14px;
 		color: #FFFFFF;
 		margin-bottom: 50upx;
-		height: 20px;
+	}
+	.award{
+		font-size: 70upx;
+		color: red;
 	}
 	.bannerImg{
 		height: 100upx;
